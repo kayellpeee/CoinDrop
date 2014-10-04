@@ -132,7 +132,7 @@ if [ -e "$DEPLOYMENT_TARGET/gulpfile.js" ]; then
   cd "$DEPLOYMENT_TARGET"
   eval $NPM_CMD install gulp
   exitWithMessageOnError "installing gulp failed"
-  ./node_modules/.bin/gulp --no-color
+  ./node_modules/.bin/gulp deploy --no-color
   exitWithMessageOnError "gulp failed"
   cd - > /dev/null
 fi

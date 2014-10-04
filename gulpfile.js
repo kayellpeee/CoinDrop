@@ -120,7 +120,7 @@ gulp.task('copy-html-files', function () {
 // });
 
 //without this our server will not start up automatically
-gulp.task('serve', ['test', 'build'] function() {
+gulp.task('serve', ['test', 'build'], function() {
     return nodemon({ script: './server.js' });
     // require('./server.js');
 });
