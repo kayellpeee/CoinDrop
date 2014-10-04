@@ -130,5 +130,6 @@ gulp.task('build', function(){
 });
 
 gulp.task('deploy', ['build'], function(){
+  console.log('running deployment………………………');
   return nodemon({ script: './server.js'});
 });
