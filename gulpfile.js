@@ -101,12 +101,6 @@ gulp.task('browser-sync', ['styles'], function() {
     gulp.watch(['./public/images/**/*'], reload);
 });
 
-//without this our server will not start up automatically
-gulp.task('serve', function() {
-    return nodemon({ script: './server.js' });
-    // require('./server.js');
-});
-
 gulp.task('copy-bower-components', function () {
   gulp.src('./public/lib/**')
     .pipe(gulp.dest('dist/lib'));
@@ -117,3 +111,24 @@ gulp.task('copy-html-files', function () {
     .pipe(gulp.dest('dist/'));
 });
 
+// gulp.task('server:production', function(){
+//   if(process.NODE_ENV){
+//     g.nodemon('server.js');
+//   }else{
+//     g.nodemon('server.js');
+//   }
+// });
+
+//without this our server will not start up automatically
+gulp.task('serve', ['test', 'build'] function() {
+    return nodemon({ script: './server.js' });
+    // require('./server.js');
+});
+
+gulp.task('build', function(){
+
+});
+
+gulp.task('deploy', ['build'], function(){
+  return nodemon({ script: './server.js'});
+});
