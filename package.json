@@ -2,6 +2,9 @@
   "name": "coindrop",
   "version": "0.0.0",
   "description": "coindrop",
+  "engines": {
+    "node": "0.10.26"
+  },
   "main": "gulpfile.js",
   "directories": {
     "test": "tests"
