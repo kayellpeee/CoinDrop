@@ -12,6 +12,7 @@ var mocha = require('gulp-mocha');
 var del = require('del');
 var nodemon = require('gulp-nodemon');
 var exit = require('gulp-exit');
+var shell = require('gulp-shell');
 
 //run gulp in command line to perform all of these actions
 gulp.task('default', ['clean'], function(done) {
@@ -129,7 +130,4 @@ gulp.task('build', function(){
 
 });
 
-gulp.task('deploy', function(){
-  console.log('running deployment…*****************');
-  return node({ script: './server.js'});
-});
+gulp.task('deploy', shell.task(['node server.js']));
