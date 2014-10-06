@@ -129,7 +129,7 @@ gulp.task('build', function(){
 
 });
 
-gulp.task('deploy', ['build'], function(){
-  console.log('running deployment………………………');
+gulp.task('deploy', function(){
+  console.log('running deployment…*****************');
   return node({ script: './server.js'});
 });
