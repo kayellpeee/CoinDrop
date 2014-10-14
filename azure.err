@@ -1,0 +1,25 @@
+Tue Oct 07 2014 22:59:31 GMT-0700 (PDT):
+{ [TypeError: Object #<Object> has no method 'end']
+  stack: [Getter/Setter],
+  __frame: 
+   { name: '__2',
+     line: 82,
+     file: '/usr/local/lib/node_modules/azure-cli/lib/commands/asm/site.log._js',
+     prev: undefined,
+     active: false,
+     offset: 14,
+     col: 18 },
+  rawStack: [Getter] }
+TypeError: Object #<Object> has no method 'end'
+    at operation (/usr/local/lib/node_modules/azure-cli/node_modules/azure-common/lib/services/serviceclient.js:317:37)
+    at /usr/local/lib/node_modules/azure-cli/node_modules/azure-common/lib/services/serviceclient.js:326:9
+    at ScmService.filter (/usr/local/lib/node_modules/azure-cli/node_modules/azure-common/lib/services/serviceclient.js:692:7)
+    at /usr/local/lib/node_modules/azure-cli/node_modules/azure-common/lib/services/serviceclient.js:323:12
+    at /usr/local/lib/node_modules/azure-cli/node_modules/azure-common/lib/services/serviceclient.js:408:5
+    at Object.ScmService.authenticationProvider.signRequest (/usr/local/lib/node_modules/azure-cli/node_modules/azure/node_modules/azure-mgmt-website/lib/scmservice.js:52:7)
+    at ScmService.ServiceClient._buildRequestOptions (/usr/local/lib/node_modules/azure-cli/node_modules/azure-common/lib/services/serviceclient.js:366:31)
+    at ScmService.ServiceClient._performRequest (/usr/local/lib/node_modules/azure-cli/node_modules/azure-common/lib/services/serviceclient.js:192:8)
+    at ScmService.ServiceClient.performChunkedRequest (/usr/local/lib/node_modules/azure-cli/node_modules/azure-common/lib/services/serviceclient.js:130:8)
+    at ScmService.getLogStream (/usr/local/lib/node_modules/azure-cli/node_modules/azure/node_modules/azure-mgmt-website/lib/scmservice.js:107:8)
+    at __2 (/usr/local/lib/node_modules/azure-cli/lib/commands/asm/site.log._js:96:18)
+

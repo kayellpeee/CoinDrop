@@ -1,6 +1,5 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
-var bcrypt = require('bcrypt');
 var Q = require('q');
 var objectId = mongoose.Schema.Types.ObjectId;
 
