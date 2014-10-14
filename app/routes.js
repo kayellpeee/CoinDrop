@@ -102,7 +102,6 @@ module.exports = function(app) {
         //if user found
         user.pwComparePromise(password).then(function (isMatch) {
           if(isMatch) {
-              // console.log('REQ SESSION GENERATION', req);
             req.user_id = user._id;
             req.session.regenerate(function (err) {
               res.json({user: user, token: req.sessionID});
